@@ -1,4 +1,4 @@
-# CoherentInfinity 40-100 
+# Coherent Infinity 40-100 
 
 Documentation and software for Coherent Infinity 40-100 laser. 
 
