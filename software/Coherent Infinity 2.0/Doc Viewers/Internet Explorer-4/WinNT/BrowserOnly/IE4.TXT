@@ -1,0 +1,614 @@
+     ------------------------------------------------------------
+                    README for Internet Explorer 4.0
+                              September l997      
+     ------------------------------------------------------------
+
+               (c) Copyright Microsoft Corporation, 1997
+
+
+This document provides complementary or late-breaking information 
+to supplement the Microsoft Internet Explorer documentation. You 
+can also look at the Microsoft(R) Web site for the latest information.
+
+If you're looking for information about a specific program or 
+component, try searching for it in the Microsoft Knowledge Base 
+at http://www.microsoft.com/kb/default.asp.
+
+
+------------------------
+HOW TO USE THIS DOCUMENT
+------------------------
+
+To view IE4.txt on screen in Notepad, maximize the Notepad window.
+
+To print IE4.txt, open it in Notepad or another word processor, and 
+then use the Print command on the File menu.
+
+
+CONTENTS
+========
+
+SYSTEM REQUIREMENTS
+  Using Internet Explorer 4.0 with Virtual Memory
+SETUP
+  Installing Internet Explorer 4.0
+  Running Internet Explorer 4.0 on Windows NT
+  Running Internet Explorer 4.0 on a Dual-Boot Operating System
+  Uninstalling Internet Explorer 4.0
+  Cannot Use Registry or ERD Files Created Before 
+    Installing Internet Explorer 4.0
+  Adding or Removing the Windows Desktop Update
+  Installing Internet Explorer in a Language Different 
+    from the Operating System Language
+USING A LOCAL AREA NETWORK PROXY SERVER OR FIREWALL
+  Using the Novell NetWare 32-bit Client
+  Using Internet Explorer with Socks Proxy Servers
+HTML DEVELOPERS
+  Structuring HTML with Framesets
+  Using the HTML Layout Control
+  ActiveX Controls in Internet Explorer 4.0
+  Problem With Visual Basic 5.0 ActiveX Controls
+JAVA DEVELOPERS
+  Installing Java Classes
+  Refreshing Java Applets Under Development
+    without Restarting Internet Explorer
+  Using Visual J++ with Internet Explorer 4.0
+NOTE TO FRENCH USERS OF INTERNET EXPLORER 4.0
+KNOWN ISSUES
+  PICS Support Works Differently in Internet Explorer 4.0
+  Some Programs Do Not Detect Browser Version Correctly
+  Temporary Internet Files Are Replicated 
+    to the Home Directory of Roaming Users
+  Java Applets Will Not Print on Asian Windows 95 Computers
+  Using NetMeeting When Internet Explorer 4.0 Is in Offline Mode
+  Access Aptiva Issues with Internet Explorer 4.0
+APPLICATION COMPATIBILITY
+  Adobe Acrobat: Using Internet Explorer 4.0 with 
+    Adobe Acrobat Reader 3.0
+  CleanSweep: Critical System Files Replaced
+  DEC ClientWorks: Remove Xdmisrv.exe Before Installing 
+    Internet Explorer 4.0
+  Internet Information Server 4.0: Unable to Install from the Internet
+  Microsoft Money: Online Banking Does Not Work
+  Norton Utilities and Norton Navigator
+  Procomm Plus 95 Web Browser: Browser Properties Control Doesn't Work
+  Stacker: Size of Host Drive Must Be Increased
+  Telcom Fax: Unable to Send Network Faxes
+
+
+SYSTEM REQUIREMENTS
+===================
+
+To run Internet Explorer 4.0, your system must meet the following 
+minimum requirements:
+
+- A 486 with a 66 Mhz processor (Pentium processor recommended)
+- For Microsoft Windows 95:
+  8 MB of RAM minimum, 16 MB with Active Desktop
+  For Microsoft Windows NT:
+  16 MB of RAM minimum, 24 MB with Active Desktop
+- For Microsoft Windows NT: 
+  You must be running Service Pack 3 (or higher)
+- 40 to 70 MB of hard-disk space (depending on installation type) 
+- Mouse
+- Modem
+- CD-ROM
+
+Using Internet Explorer 4.0 with Virtual Memory
+-----------------------------------------------
+Internet Explorer requires you to use virtual memory in order to 
+run properly. To make sure you are using virtual memory:
+
+1. Click the Start button, point to Settings, and then click 
+   Control Panel.
+
+2. Double-click the System icon, and then click the Performance tab.
+
+3. Click Virtual Memory.
+
+4. If you are specifying virtual memory settings, clear the 
+   Disable Virtual Memory check box. If this check box is selected, 
+   Internet Explorer will not run.
+
+   TIP: You can set Windows to manage virtual memory for you by 
+        selecting the Let Windows Manage My Virtual Memory check 
+        box.
+
+
+SETUP
+=====
+
+- WARNING: Do not install any previous version of Internet 
+  Explorer over Internet Explorer 4.0. If you need to install 
+  an earlier version of Internet Explorer, you must uninstall 
+  Internet Explorer 4.0 first.
+
+- You should always uninstall your current version of Internet 
+  Explorer 4.0 before installing a newer build.
+
+- It is recommended that you download Internet Explorer 4.0 to a 
+  directory that does not contain any other files and that will not 
+  be used for any other purpose. If for some reason you want to 
+  uninstall the setup files by clicking the Add/Remove Programs 
+  icon and then clicking Microsoft Internet Explorer 4.0 Setup 
+  Files, the download directory will be removed.
+
+- Before you install Internet Explorer 4.0, you should disable any 
+  scheduled tasks from running that might interfere with the Setup 
+  process.
+
+Installing Internet Explorer 4.0
+--------------------------------
+Whether you choose to install over the network or to download 
+the installation files to your hard disk, the Setup files are 
+copied to your hard disk. This is so you can reinstall more 
+quickly if you need to. If you want to reclaim the disk space, 
+you can remove the setup directory by double-clicking the Add/Remove 
+Programs icon in Control Panel and then clicking Internet Explorer 
+4.0 Setup Files.
+
+You cannot install Internet Explorer 4.0 to or run it from a 
+network drive. However, you can download it to a network drive. 
+To do this, you must map the network drive to a drive letter on 
+your computer. You cannot download Internet Explorer 4.0 to a 
+UNC path.
+
+If Internet Explorer 4.0 appears to stop responding at the end 
+of Setup, you need to restart your computer manually. 
+
+Running Internet Explorer 4.0 on Windows NT
+-------------------------------------------
+NOTE: You must have administrative privileges to install and 
+uninstall this program on Windows NT. This includes having 
+administrative privileges the first time you start your computer 
+after installing or uninstalling.
+
+You must restart your computer after installing Internet Explorer 
+4.0. This is also true for some add-on components.
+
+If you're running Internet Explorer 4.0 on Windows NT, you must 
+set user permissions to Full Control for the Temporary Internet 
+Files folder (cache). The user must have write permission in order 
+for files to be stored in the Temporary Internet Files folder.
+
+If you must reinstall Windows NT 4.0 Service Pack 3 (SP3) after 
+you install Internet Explorer 4.0, you must specify when prompted 
+that you do not want it to overwrite any files that are newer. 
+After SP3 is reinstalled, carry out the following steps to update 
+the registry:
+
+1. Click the Start button, and then click Run.
+2. Type the following: regsvr32 rsabase.dl
+3. Click OK.
+
+Running Internet Explorer 4.0 on a Dual-Boot Operating System
+-------------------------------------------------------------
+If your computer is set up to dual boot between two operating 
+systems, you must install Internet Explorer 4.0 in separate 
+directories for each operating system. For example, if you are 
+running Windows 95 and Windows NT, you might want to install 
+Internet Explorer 4.0 in C:\IE95 for Windows 95 and in C:\IENT 
+for Windows NT. Do not try to use the same installation of 
+Internet Explorer with two operating systems. If you later 
+uninstall Internet Explorer 4.0, one of your operating systems 
+may be left unbootable.
+
+Note also that if you dual boot between two operating systems 
+that are configured to share a Program Files folder, and you 
+uninstall an add-on component from one of your Internet Explorer 
+4.0 installations, it will be removed from both of them. This is 
+because the add-on files are stored in the Program Files folder.
+
+Uninstalling Internet Explorer 4.0
+----------------------------------
+You can uninstall Internet Explorer 4.0 by carrying out the 
+following steps:
+
+1. In Control Panel, click the Add/Remove Programs icon.
+2. Click Microsoft Internet Explorer 4.0, and then click Add/Remove.
+3. Follow the instructions on your screen.
+
+Cannot Use Registry or ERD Files Created Before 
+  Installing Internet Explorer 4.0
+-----------------------------------------------
+If you install Internet Explorer 4.0 and then restore a Windows 95 
+registry that was created before you installed Internet Explorer 4.0, 
+or use a Windows NT Emergency Repair Disk (ERD) that was created 
+before you installed Internet Explorer 4.0, you may be unable to 
+start Windows 95 or Windows NT 4.0.
+
+To resolve this problem, use the Ieremove.exe tool to remove Internet 
+Explorer 4.0. For information about how to do so, open the Microsoft 
+Knowledge Base at http://www.microsoft.com/kb/default.asp, and then 
+see the following articles:
+
+  For Windows 95, see Article Q166313, 
+  "Removing Internet Explorer 4.0 for Windows 95 Using Ieremove.exe"
+
+  For Windows NT, see Article Q166314,
+  "Removing Internet Explorer for Windows NT 4.0 Using Ieremove.exe"
+
+Adding or Removing the Windows Desktop Update
+---------------------------------------------
+To add or remove the Windows Desktop Update, carry out the following 
+steps:
+
+1. In Control Panel, double-click the Add/Remove Programs icon.
+2. Click Microsoft Internet Explorer 4.0, and then click Add/Remove.
+3. To remove it, click "Remove the Windows Desktop Update component 
+   but keep the Internet Explorer 4.0 Web browser."
+
+   To add it, click "Add the Windows Desktop Update component from 
+   Web site," and then follow the instructions on the screen.
+
+NOTE: For this release, clicking "Add the Windows Desktop Update 
+component from Web Site" opens the Internet Explorer 4.0 components 
+download page so you can download and install the Windows Desktop 
+Update. If you have previously downloaded or installed the Windows 
+Desktop Update, you can enable it without connecting to the Internet 
+by running IE4setup.exe from your local Internet Explorer 4.0 Setup 
+folder. When prompted, click Yes to enable the Windows Desktop 
+Update, and then choose to upgrade only newer items.
+
+Installing Internet Explorer in a Language Different 
+  from the Operating System Language
+----------------------------------------------------
+If you install a version of Internet Explorer in a language 
+different from the language of the operating system you are 
+running, the Windows Desktop Update will not be installed.
+
+
+USING A LOCAL AREA NETWORK PROXY SERVER OR FIREWALL
+===================================================
+
+If your local area network or ISP uses a proxy serveror firewall 
+to protect your network from being accessed by other people on the 
+Internet, carry out the following steps, which set up your computer 
+to gain access to the Internet through a firewall:
+
+1. Run the Internet Connection Wizard:
+
+   - Click the Start button, point to Programs, point to Internet 
+     Explorer, and then click Connection Wizard.
+
+2. Configure your computer to connect to the Internet by using 
+   the TCP/IP protocol on your local area network. 
+
+3. When you are prompted for the gateway address, type the IP 
+   address (for example, 123.456.789.123) supplied by your 
+   network administrator only if your organization uses gateways 
+   for routing information over the network.
+
+   NOTE: The gateway computer is not the same as the proxy or 
+         firewall computer that protects your local area network 
+         from the Internet, so do not type your proxy or firewall 
+         address here.
+
+4. Click the Start button, point to Settings, and then click 
+   Control Panel.
+
+5. Double-click the Internet icon, and then click the Connection 
+   tab.
+
+6. In the Proxy area, select the Connect To The Internet Through 
+   A Proxy Server check box.
+
+7. Click Change Proxy Settings.
+
+8. In the first text box, type the HTTP server address for the 
+   computer you want to use as the proxy server. In the second text 
+   box, type the port number. The following is an example of a proxy 
+   server and port number:
+
+   http://myproxy.mycompany.com:80
+
+   In this example, you would type http://myproxy.mycompany.com in
+   the first text box, and 80 in the second text box.
+
+   You can use a different proxy server for different types of 
+   addresses. However, if you want to use the same proxy for all 
+   types of addresses, make sure you select the Use Same Proxy Server 
+   For All Addresses check box.
+
+9. In the Exceptions area, click in the text box, and then type the 
+   names of the computers, domains, and ports on the Internet that,
+   when accessed, will not go through the proxy server. Separate each 
+   item you type with a semicolon (;). If you do not know what to type 
+   here, see your network administrator.
+
+   If you do not want to use the proxy server for local addresses, make 
+   sure you select the Do Not Use Proxy For Local (Intranet) Addresses 
+   check box. Local addresses are defined as those where the server 
+   name does not contain a period (.). For example:
+
+   http://internalweb/        is a local address.
+   http://www.microsoft.com/  is not a local address.
+
+   For Help on these items, click the ? in the title bar, and then 
+   click the item.
+
+10. When you have finished changing settings, click OK.
+
+11. Click OK again to close Internet properties.
+    If you are running Internet Explorer, you need to restart 
+    your computer so that the new proxy settings can take effect.
+
+Using the Novell NetWare 32-bit Client
+--------------------------------------
+If you are using the Novell NetWare 32-bit client with Windows 95, 
+add the following registry entry to your system:
+
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings
+	DontUseDNSLoadBalancing = (REG_DWORD) 1
+
+This setting will ensure correct usage of proxy servers with 
+Internet Explorer on your network. This will be fixed in future 
+updates.
+
+Using Internet Explorer with Socks Proxy Servers
+------------------------------------------------
+If you are setting up Internet Explorer with a Socks proxy server, 
+you must set it up separately from other proxy information (for 
+example, HTTP, FTP, or Gopher). In most cases, this means that all 
+other proxy fields should be left blank and the Socks field should 
+contain the address of your Socks proxy server. The only exception 
+is when you are using a Socks proxy and a different proxy (for example, 
+HTTP) on the same connection. If you are having trouble, please contact 
+your network administrator for information about Socks and proxy servers.
+
+
+HTML DEVELOPERS
+===============
+
+Structuring HTML with Framesets
+-------------------------------
+If you are designing pages with framesets, you must use the 
+following HTML structure for the pages to work correctly in 
+Internet Explorer 4.0:
+
+- A <BODY> tag (or other text or tags that force a BODY) should 
+  not appear before a <FRAMESET> tag. If a BODY tag does precede 
+  the FRAMESET, the contents of the FRAMESET are discarded and the 
+  page will appear blank.
+
+- <SCRIPT> and <OBJECT> tags in a page with a <FRAMESET> tag must 
+  appear in the <HEAD> section of the page.
+
+Using the HTML Layout Control
+-----------------------------
+Some differences may be experienced when using the HTML layout control with IE4.0. For more information please see http://www.microsoft.com/workshop/author/layout
+
+ActiveX Controls in Internet Explorer 4.0
+-----------------------------------------
+Because of some architectural changes in Internet Explorer 4.0 that 
+were needed to support a wider range of controls more efficiently, 
+some ActiveX Controls may not perform exactly as they did in 
+Internet Explorer 3.0. A common cause of this is that the control 
+was not created as Apartment Model Aware. Many control vendors now 
+offer updated controls that work properly with Internet Explorer 4.0. 
+If you have any problems with ActiveX Control support in Internet 
+Explorer 4.0, contact the control vendor to see if an updated 
+version of the control is available that fixes the problem.
+
+Problem With Visual Basic 5.0 ActiveX Controls
+---------------------------------------------- 
+Some ActiveX Controls created with Microsoft Visual Basic 5.0 may 
+not function properly in Internet Explorer 4.0, because these controls 
+are not Apartment Model Aware. Controls that are created with VB 5.0 
+should be rebuilt using the Service Pack available free from Microsoft 
+for VB 5.0 and the Control Creation edition of VB 5.0 that allows for 
+the creation of Apartment Model Aware Controls.
+
+
+JAVA DEVELOPERS
+===============
+
+Installing Java Classes
+-----------------------
+As part of the VM for Java installation, the new class files are 
+added to the class path of developer machines. If you install a Java 
+development tool after installing Internet Explorer 4.0, please 
+run the clspack tool in your Windows directory to put the classes 
+on your class path. To create a single Classes.zip file in your 
+%WINDIR%\Java\Classes directory that contains all classes stored in 
+the package manager, use the following syntax: clspack -auto. This 
+option also adds Classes.zip to the CLASSPATH registry key. 
+
+Refreshing Java Applets Under Development 
+  without Restarting Internet Explorer
+-----------------------------------------
+Microsoft Visual J++ 1.1 and other development environments have 
+previously required the browser to be restarted in order for updated 
+classes to be used while debugging. This was because of issues with 
+Internet Explorer loading Java classes from the cache rather than from 
+any updated classes on the developer's computer. Using Internet Explorer 
+4.0, you can just press CTRL+F5 or CTRL + the Refresh button to 
+cause the classes to be reloaded and any updates used.
+
+Using Visual J++ with Internet Explorer 4.0
+-------------------------------------------
+If you use Visual J++, you can install Internet Explorer with or 
+without the Windows Desktop Update. If you do choose to install the 
+Windows Desktop Update with the browser, you will need to do the 
+following:
+
+1. Install Visual Studio SP2.
+2. Modify your project settings as follows:
+   a. On the Project menu, click Settings.
+   b. Click the Debug tab.
+   c. In the Category box, click Browser.
+   d. Add the -new switch to the path to the browser. For example:
+
+      C:\Program Files\Internet Explorer\Iexplore.exe -new
+
+Note that this modification must be made on a per-project basis. 
+For more information, see Microsoft Knowledge Base article Q167998.
+
+
+NOTE TO FRENCH USERS OF INTERNET EXPLORER 4.0
+=============================================
+
+In order to comply with French laws on the use of encryption material, 
+the following features have been disabled for users in France:
+
+- S/MIME support in Outlook Express
+- The Microsoft Wallet secure storage feature
+- PCT 1.0 support
+
+However, SSL 2.0 and SSL 3.0 support are authorized, and are still 
+enabled.
+
+KNOWN ISSUES
+============
+
+PICS Support Works Differently in Internet Explorer 4.0
+-------------------------------------------------------
+The Internet Explorer Content Advisor uses PICS (Platform for 
+Internet Content Selection) ratings. The PICS functionality 
+varies from that in Internet Explorer 3.0 in the following 
+instances:
+
+- The PICS rating is not used for documents using the file:// 
+  protocol.
+
+- If you have ratings enabled, you might not be able to view 
+  certain items that you've added to your Active Desktop. If 
+  you see a "Navigation Canceled" error message instead of Web 
+  content, try turning off ratings. 
+
+Some Programs Do Not Detect Browser Version Correctly
+-----------------------------------------------------
+Some third-party Internet-based programs use non-standard 
+methods of detecting the current browser version. If you see this 
+problem in a program you are running, please contact the program 
+vendor for an update.
+
+Temporary Internet Files Are Replicated 
+  to the Home Directory of Roaming Users
+----------------------------------------
+The Temporary Internet Files folder is replicated to the home 
+directory of users with roaming profiles. If you are running 
+Internet Explorer 4.0 on a Windows NT system, this may cause 
+disk-space problems on servers with numerous roaming users or 
+with several users who have with large caches. To set cache size, 
+click the View menu, click Internet Options, and then click the 
+Settings button.
+
+Java Applets Will Not Print on Asian Windows 95 Computers
+---------------------------------------------------------
+If you are running a Far East version of Windows 95, printing a page 
+that contains a Java applet prints only the page without the applet. 
+This will be fixed in a future release.
+
+Using NetMeeting When Internet Explorer 4.0 Is in Offline Mode
+--------------------------------------------------------------
+If you start NetMeeting with Internet Explorer 4.0 in Offline 
+mode, NetMeeting will not start properly, although no error 
+message appears. To work around this problem, dial up using RAS 
+for Windows NT computers or Dial-Up Networking for Windows 95 
+computers. Or, in Internet Explorer, click the File menu, and 
+then click Work Offline to clear the check mark.
+
+Access Aptiva Issues with Internet Explorer 4.0
+-----------------------------------------------
+The Access Aptiva component of the IBM Aptiva PC does not render 
+properly with Internet Explorer 4.0. To get an updated version of 
+the Access Aptiva program, you can either go to the IBM home page 
+at http://www.us.pc.ibm.com/aptiva, or click IBM Update Connector 
+from the Start menu, which automatically downloads the updated 
+components.
+
+
+APPLICATION COMPATIBILITY
+=========================
+
+Adobe Acrobat: Using Internet Explorer 4.0 with 
+Adobe Acrobat Reader 3.0
+-----------------------------------------------
+Using the Adobe Acrobat .pdf viewer in Internet Explorer 4.0 
+may not work. You can download the latest version from 
+http://www.adobe.com.
+
+Also, if Content Advisor is turned on in Internet Explorer 4.0, 
+you cannot view .pdf files in the browser.
+
+CleanSweep: Critical System Files Replaced
+------------------------------------------
+If you are already running Internet Explorer 4.0, installing 
+CleanSweep 3.0 is not recommended. CleanSweep replaces vital 
+system files and will cause both Internet Explorer and the 
+Active Desktop not to work properly.
+
+DEC ClientWorks: Remove Xdmisrv.exe Before Installing 
+  Internet Explorer 4.0
+-----------------------------------------------------
+If you are running DEC Client Works on a computer with Windows 95 
+and with no networking services installed, you should remove the 
+file Xdmisrv.exe from your startup group before installing Internet 
+Explorer 4.0. Otherwise, you may see the following error message when 
+your computer restarts after installation: "RPCSS caused an invalid 
+page fault in module OLE32 at 015F:7FFBAD35." This error does not 
+occur if any networking services are installed, including Dial-Up 
+Networking. This issue has been fixed in DCOM95 1.1, which you can 
+download from http://www.microsoft.com/com/.
+
+Internet Information Server 4.0: Unable to Install from the Internet
+--------------------------------------------------------------------
+If you are installing IIS 4.0 beta 2 from the Internet on a computer 
+running Internet Explorer 4.0, a dialog box will appear saying "Setup 
+was unable to download information about available installation sites." 
+To work around this problem, you can order the CD version from 
+http://www.microsoft.com/iis while supplies last. You should not 
+encounter this problem if you are installing IIS 4.0 from a CD.
+
+Microsoft Money: Online Banking Does Not Work
+---------------------------------------------
+If you install Microsoft Money 97 on a computer running Internet 
+Explorer 4.0, online transactions will not work. This is because 
+Microsoft Money is using an older version of the file Schannel.dll. 
+To work around this problem, go to the following Web site: 
+
+     http://www.microsoft.com/ie/ie40/download/128bit.htm
+
+Then install the 128-bit extensions from the Web to enable secure 
+transactions.
+
+Norton Utilities and Norton Navigator
+-------------------------------------
+- Norton Utilities version 2.0 is not compatible with the Internet 
+  Explorer 4.0 Recycle Bin because of new features that have been 
+  added to Internet Explorer.
+
+- If you are running Norton Navigator, note that the Control Panel 
+  shortcuts on the Start menu do not work.
+
+- If you reposition the taskbar to the left or right side of your 
+  desktop, the Norton Navigator quick launch area disappears.
+
+- If you are running Norton Navigator, you need to disable the 
+  Norton Taskbar feature in order to use the functionality of 
+  the new Internet Explorer 4.0 taskbar.
+
+For more information about Norton Utilities, see their Web site at 
+http://www.symantec.com/nu/.
+  
+Procomm Plus 95 Web Browser: Browser Properties Control Doesn't Work
+--------------------------------------------------------------------
+In the Procomm Plus 95 Web browser, the Browser Properties control on 
+the Setup menu does not work. However, you can set browser properties 
+by double-clicking the Internet icon in the Windows Control Panel. 
+Property settings for the Internet Explorer 4.0 browser will also 
+apply to the Procomm browser.
+
+Stacker: Size of Host Drive Must Be Increased
+---------------------------------------------
+If you run Stacker 4.1 on a computer with Internet Explorer 
+4.0, you must increase the size of the host drive. If you do 
+not increase the size of the host drive, you will not be able 
+to restart your computer successfully. 
+
+Telcom Fax: Unable to Send Network Faxes
+----------------------------------------
+This product currently does not work with Internet Explorer 4.0. 
+For information about Telcom Fax 4.0, which is compatible with 
+Internet Explorer 4.0, contact the manufacturer (http://www.ltc.com).

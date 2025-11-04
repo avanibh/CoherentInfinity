@@ -1,0 +1,131 @@
+[fc 279 280 281 282 283 284 285] ñ12 VA, ñ12 VB, +2 VB, +4 VB, +5 V out of range
+The specified supply voltage has fallen outside its normal operating range.  This message can sometimes appear when electrical transients disturb the system.  If the system otherwise behaves normally, clear the message and continue normal operation.  If the message reappears, check that the voltages on all three incoming AC phases meet specifications.  If no problem exists with the AC service, a failure has probably occurred within the Infinity power supply.  Call Coherent Technical Support.
+[end]
+
+[fc 16] AC line voltage low
+The voltage on at least one of the incoming AC lines is too low to ensure the proper and safe operation of the system.  Check all incoming phases against neutral.
+[end]
+
+[fc 259] Boost board fan not turning
+The fan cooling the booster boards (power modules) has failed.  Do not continue to operate the system as there is a risk of electrical failure.  Call Coherent technical support.
+[end]
+
+[fc 293 260] Cap bank not charged
+At the end of the charge cycle the voltage across the capacitor bank did not equal the value set by the power supply CPU.  Call Coherent technical support. 
+[end]
+ 
+[fc 258] Contactor fan not turning
+The fan cooling the two low voltage power supply boards (ñ12 VA, ñ12 VB, +2 VB, +4 VB, +5 V) has failed.  Do not continue to operate the system as there is a risk of electrical failure.  Call Coherent technical support.
+[end]
+
+[fc 278] Control system failure
+The internal system control lines changed state unexpectedly.  The power supply CPU may have lost control of the system hardware.  The CPU attempts to shut down the entire system, however, owing to the nature of this fault there is no guarantee that this will be successful.  If this message appears, turn off the system keyswitch.  Disconnect any test equipment that may be connected to the laser, remove possible sources of EMI from the lasers vicinity, and disconnect all BNC cables from the power supply.  If this message continues to appear, do not operate the laser.  Call Coherent technical support.
+[end]
+
+[fc 289] Depolarization too high
+The depolarized energy returning from the amplifier is too high.  Since this energy goes back into the DPSS laser it may jeopardize the safe and optimum performance of the master oscillator.  This condition can be caused either by misalignment of the Infinity laser or by light reflected back into the Infinity laser head from external optical surfaces.  Check carefully for such reflected beams before turning the laser back on.  Also see Procedure 4 in Chapter 7 of the Operator's manual for instructions on how to align Infinity for minimum depolarization.
+[end]
+
+[fc 257] DPSS electronic fault
+The diode pumped master oscillator (DPSS) is stabilized by several servo loops.  If one or more of these fail to keep the system parameters within their operating ranges, this message is displayed.  Possible causes are  overheating and electromagnetic interference.  There are no serviceable parts inside the DPSS housing.  If this  message appears repeatedly, call Coherent technical support.
+[end]
+
+[fc 290] EEPROM hardware fault
+The EEPROM in the power supply does not respond to commands from the PC computer.  Call Coherent technical support.
+[end]
+
+[fc 2] External (CDRH) interlock open
+The Infinity system is equipped with an external interlock circuit (the connector is located on the side of the power supply) that can be wired to external relays or other devices.  When the circuit is broken, this fault appears and the system shuts off.  To restart it, close the external interlock circuit and turn the laser on through the user interface.  See Chapter 9 for a description of how to install an external safety switch.
+[end]
+
+[fc 287] FlashTrack at limit
+The FlashTrack servo system has reached the end of its adjustment range.  FlashTrack will not function properly and the laser pulse-to-pulse noise will increase.  Check that the cable is connected to the photodiode housing, 18 in Figure 4-1 of the Operator's Manual.
+[end]
+
+[fc 263] High water temperature
+The temperature of the internal cooling water exceeds 45 degrees C.  All subsystems in the laser are switched off.  Make sure that the water pump is working and that the incoming external cooling water is colder than 30 degrees C.  Check that the water can flow freely through the hoses and the umbilical.  If the problem persists, remove the cover on the water side of the power supply.  Turn the regulating valve (5 in Figure 4-5 in Chapter 4 of the Operator's Manual, located between the heat exchanger and the deionization filter) half a turn clockwise.  Restart the water pump when the internal water has cooled down.
+[end]
+
+[fc 1] Interlock open
+There are five interlocks in the system:  (1) the laser head cover interlock, (2) the flash lamp terminal box cover (3) the external interlock, and (4&5) the two interlock dowel pins next to the latches holding the POT.  If any of these interlocks are tripped, the system will shut off.  To restart it, close all of the interlocks and turn the laser on through the user interface.
+[end]
+
+[fc 261] Lamp not simmering
+The system has failed to ignite the lamp, or the lamp simmer has ceased during operation.  When the lamp is simmering, a steady white glow can be seen through the ends of the laser rods.  Check that the lamp leads are connected and that the lamp itself is undamaged.  Try to simmer the lamp again by first turning the laser off and then to STANDBY.  If the lamp does not simmer after a couple of attempts, call Coherent technical support.
+[end]
+
+[fc 128] Low capacitor bank voltage
+The voltage across the capacitor bank fell below the line voltage.  The system shuts off.  This message may occur when trying to operate the laser at very low voltage settings (<380 volts).  If this message cannot be defeated by setting the voltage to >400V, clearing the fault, and turning the laser back on, call Coherent technical support.
+[end]
+
+[fc 515] Power module A over current
+One of the power module (boost) boards has failed.  If the message returns after clearing the fault and cycling the laser power, call Coherent technical support.
+[end]
+
+[fc 513] Power module A over temperature
+One of the power module (boost) boards has failed.  If the message returns after clearing the fault and cycling the laser power, call Coherent technical support.
+[end]
+
+[fc 514] Power module A voltage fault
+One of the power module (boost) boards has failed.  If the message returns after clearing the fault and cycling the laser power, call Coherent technical support.
+[end]
+
+[fc 516] Power module B over current
+One of the power module (boost) boards has failed.  If the message returns after clearing the fault and cycling the laser power, call Coherent technical support.
+[end]
+
+[fc 517] Power module B over temperature
+One of the power module (boost) boards has failed.  If the message returns after clearing the fault and cycling the laser power, call Coherent technical support.
+[end]
+
+[fc 518] Power module B voltage fault
+One of the power module (boost) boards has failed.  If the message returns after clearing the fault and cycling the laser power, call Coherent technical support.
+[end]
+
+[fc 274] Remote buffer overflow
+The PC sent a message to the power supply before the previous message was acknowledged by the power supply.  Since the message exchange is under software control, this error would normally indicate a software defect, although it could possibly be caused by a noisy serial line or defective serial port.  Check that the serial port and the cable between the computer and power supply are OK.  Eliminate any possible sources of EMI.  If possible try another computer.
+[end]
+
+[fc 277] Remote framing error
+The UART on the CPU reported a framing error, which typically results from a baud rate mismatch between the serial sender and receiver.  Since the baud rate settings are under software control, this error would normally indicate a software defect, although it could possibly be caused by a noisy serial line or defective serial port.   Check that the serial port and the cable between the computer and power supply are OK.  Eliminate any possible sources of EMI.  If possible try another computer.
+[end]
+
+[fc 276] Remote parity error
+The UART on the CPU board reported a parity error, indicating noise on the serial line.  Check that the serial port and the cable between the computer and power supply are OK.  Eliminate any possible sources of EMI.  If possible try another computer.
+[end]
+
+[fc 275] Remote UART overrun
+The UART on the CPU reported a character overrun, a condition in which a character was received while the previous character was still unread by the CPU.  This indicates a software defect.  Report the problem to Coherent technical support.
+[end]
+
+[fc 286] SCR failure
+One (or both) of Infinity's solid state rectifiers system has (have) failed.  Call Coherent technical support.
+[end]
+
+[fc 288] Servo error: no lasing
+If the internal power meter reads less than 10 mJ/pulse and the lamp voltage is above 460 V this message is displayed.  Check that there are no obstructions in the beam path and that the cable to the photodiode housing is connected, 24 in Figure 4-1 of the Operator's Manual.
+[end]
+
+[fc 294] Transformer fan not turning
+The fan cooling the power transformer has failed.  If the system does not have such a transformer (it is installed only on 380 V systems), it can still be operated safely.  Call Coherent's technical support for further assistance.
+[end]
+
+[fc 8 262 265] Water flow low
+The flow rate in the internal cooling loop is too low to ensure safe operation of the system.  Remove the cover on the water side of the power supply.  Check that there are no leaks and that the particle filter is in good condition.  Remove the cap on the end of the pump and, by switching the pump on and off, establish that it is spinning clockwise.
+[end]
+
+[fc 4] Water level low
+The water level in the reservoir, located in the power supply, is too low.  Refill with deionized water and check for leaks.
+[end]
+
+[fc 291] Water resistivity low
+The resistivity of the internal cooling water is less than 1.5 MOhm-cm.  To increase the water resistivity, remove the cover on the water side on the power supply. Turn the bypass valve, 3 in Figure 4-5 of the Operator's Manual, half a turn counter-clockwise.  Wait until the resistivity (use the Monitor window) stabilizes.  Repeat if necessary.  The recommended value is 3 MOhm-cm and the recommended range is 2 MOhm-cm to 4 MOhm-cm.  If the resistivity stays below 2 MOhm-cm with the valve fully open, replace the deionization cartridge.
+[end]
+
+[fc 292] Water resistivity high
+The resistivity of the internal cooling water is greater than 10 MOhm-cm.  This message may indicate a failure of the resistivity monitoring circuitry, since it is unlikely that the true resistivity would reach such a high value.  To reduce the resistivity, remove the cover on the water side on the power supply. Turn the bypass valve, 3 in Figure 4-5 of the Operator's Manual, half a turn clockwise.  Wait until the resistivity (use the Monitor window) stabilizes.  Repeat if necessary.  The recommended value is 3 MOhm-cm and the recommended range is 2 MOhm-cm to 4 MOhm-cm.  
+[end]
+
+[fc 64] Wrong AC phase rotation
+The relative order of the three incoming AC phases is wrong.  Interchange any two of them and try again.
+[end]

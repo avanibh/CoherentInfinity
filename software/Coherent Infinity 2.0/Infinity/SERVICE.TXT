@@ -1,0 +1,2 @@
+If this file is named 'Service.txt' and is present in the Infinity directory, 
+it will allow access to the Service Window.

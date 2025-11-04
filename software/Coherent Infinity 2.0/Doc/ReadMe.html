@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Infinity Release Notes</TITLE>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+<P>March 1998</P>
+
+<H1 ALIGN=CENTER>Infinity V2.0 Release notes</H1>
+
+<P>
+<HR></P>
+
+<H2><A NAME="Contents"></A>Contents</H2>
+
+<P><A HREF="#Installation">Installation<BR>
+</A><A HREF="#Changes">Changes from the OS/2 Version<BR>
+</A><A HREF="#Known">Known limitations<BR>
+</A><A HREF="#DDE">DDE Programmer's Notes</A></P>
+
+<H3><A NAME="Installation"></A>Installation</H3>
+
+<BLOCKQUOTE>
+<P>This procedure describes how to upgrade an OS/2 installation to 32-bit
+Windows (95 or NT4.0). The procedure for a new installation is similar,
+except that all of the necessary configuration and calibration files are
+shipped with the new software. For a new installation, users should skip
+steps 1 and 3 below.</P>
+
+<H4>1. Back up existing calibration information.</H4>
+
+<BLOCKQUOTE>
+<P>New users should skip this step.</P>
+
+<P>On the existing OS/2 computer, locate the OS/2 directory that contains
+the Infinity program. In this directory you will find a number of files
+with extension *.in. These files contain the calibration, shot count, and
+configuration information for the laser. Copy all of these files <I>except
+for FAULTHLP.IN, CONFIG.IN, and WINDOWS.IN</I> to a floppy disk (or any
+other backup medium).</P>
+</BLOCKQUOTE>
+
+<H4>2. Install the Windows program.</H4>
+
+<BLOCKQUOTE>
+<P>On the new Windows computer, make a directory for the Windows Infinity
+program and copy (or unzip) all of the program files into it (<A HREF="files.html">reference:
+distribution file list</A>).</P>
+</BLOCKQUOTE>
+
+<H4>3. Copy the calibration files into the program directory.</H4>
+
+<BLOCKQUOTE>
+<P>New users should skip this step.</P>
+
+<P>Copy all of the *.in files that you saved in step 1 into the new program
+directory created in step 2.</P>
+</BLOCKQUOTE>
+
+<H4>4. Run the Infinity program by double-clicking on the Infinity.exe
+program icon.</H4>
+
+<BLOCKQUOTE>
+<P>For convenience you can use standard operating system procedures to
+make a program group or create a shortcut to Infinity.exe.</P>
+</BLOCKQUOTE>
+</BLOCKQUOTE>
+
+<CENTER><P><I><A HREF="#Contents">Back to contents</A></I></P></CENTER>
+
+<P>
+<HR></P>
+
+<H3><A NAME="Changes"></A>Changes from the OS/2 Version</H3>
+
+<OL>
+<LI>The main control panel button for &quot;Servo&quot; has been replaced
+by &quot;About,&quot; which opens an About dialog. The Servo window can
+be accessed through a pull down menu in the Service window.</LI>
+
+<LI>It is now possible to disable access to the Service window by deleting
+or renaming the file Service.txt in the Infinity program directory. If
+this file is not present when the &quot;Service&quot; button is pressed,
+the program will not open the window.</LI>
+
+<LI>There is no longer a separate &quot;demo&quot; version of the program.
+If the program is run from a command line by typing:<BR>
+&gt;<TT><FONT FACE="Gallery">infinity run<BR>
+</FONT></TT>the program will run in demo mode.</LI>
+</OL>
+
+<CENTER><P><I><A HREF="#Contents">Back to contents</A></I></P></CENTER>
+
+<P>
+<HR></P>
+
+<H3><A NAME="Known"></A>Known limitations</H3>
+
+<OL>
+<LI>Win95: Fonts on the Service window A/D channel list is sometimes not
+set properly. When the program is run from a command line the font is always
+correct, but when it is run by double-clicking its icon the font will sometimes
+be too wide.</LI>
+
+<LI>Win95: Command line argument &quot;demo&quot; is ignored. Program always
+starts in RS232 mode regardless of any command line arguments.</LI>
+
+<LI>Windows NT 4.0: The program has been observed to hang completely on
+startup when the machine's serial port drivers were not properly configured.
+In this state the program did not respond to mouse events and did not redraw
+its windows after they were covered by another application. The program
+can only be stopped using the NT Task Manager. The problem was not actually
+within the Infinity software but with the system's serial ports; however
+the behavior of the program made this difficult to determine. </LI>
+</OL>
+
+<CENTER><P><I><A HREF="#Contents">Back to contents</A></I></P></CENTER>
+
+<P>
+<HR></P>
+
+<H3><A NAME="DDE"></A>DDE Programmer's Notes </H3>
+
+<P>This version of the Infinity program is a fully functional DDE server
+capable of communicating with other Windows applications. This section
+describes the protocol used and is intended to support application programming.
+It assumes a familiarity with Windows DDE concepts and terminology. For
+further information, see the Microsoft Windows Software Development Kit
+(SDK) help or an equivalent reference source.</P>
+
+<P>Infinity acts as a DDE Server supporting a single application/topic
+pair:</P>
+
+<BLOCKQUOTE>
+<P><B>Application: 'Infinity'<BR>
+Topic: 'Control'</B></P>
+</BLOCKQUOTE>
+
+<P>To start the Infinity DDE server, open the Application window and select
+the DDE item from the Remote pull-down menu. Before commands can be sent
+to Infinity, the client program must obtain the window handle of the Infinity
+DDE server. This is accomplished by means of a WM_DDE_INITIATE message
+containing the application/topic pair ('Infinity'/'Control') just given.</P>
+
+<P>Once communication is established, Infinity processes DDE transactions
+of type WM_DDE_REQUEST. This message takes two parameters:</P>
+
+<BLOCKQUOTE>
+<P><B>Format: </B>The only supported format type is CF_TEXT.<BR>
+<B>Item: </B>A string containing the command to be sent to Infinity. The
+strings are identical to the RS-232 commands as documented in the <I>Infinity
+User's Manual</I>. A terminating CR/LF is not required.</P>
+</BLOCKQUOTE>
+
+<P>In response, Infinity sends a DDE transaction of type WM_DDE_DATA back
+to the client window. The returned item has a format type of CF_TEXT. The
+content of the responses is the same as for RS-232 commands, and is documented
+in the <I>Infinity User's Manual.</I></P>
+
+<CENTER><P><I><A HREF="#Contents">Back to contents</A></I></P></CENTER>
+
+<P>&nbsp;</P>
+
+</BODY>
+</HTML>
